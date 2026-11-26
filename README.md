@@ -1,54 +1,51 @@
+# One Day of World News — Wednesday 25 November 2026
+
 [![news-image-20261125](https://make.fun/badge/news-image-20261125.svg)](https://make.fun/bounty/news-image-20261125?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
 [![rank](https://make.fun/badge/news-image-20261125/zenganteng0987/news-image-20261125/rank.svg)](https://make.fun/bounty/news-image-20261125/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
 [![reward](https://make.fun/badge/news-image-20261125/zenganteng0987/news-image-20261125/reward.svg)](https://make.fun/bounty/news-image-20261125?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261125)
 
-# THE DAILY ATLAS — Wednesday 25 November 2026
+Owner: [zenganteng0987](https://github.com/zenganteng0987) · Repo:
+`zenganteng0987/news-image-20261125` · Competition:
+[news-image-20261125 on make.fun](https://make.fun/c/news-image-20261125/)
 
-A one-page newspaper image summing up the world's news of Wednesday
-25 November 2026: 32 stories in 15 illustrated main cards plus an
-ALSO list, a "THE DAY IN UTC" chronology strip, a "BY THE NUMBERS"
-strip, and a "DATE CHECK" strip naming stories deliberately left out
-because they happened before 25 November.
+V2 of the entry for "Sum up 25 November's world news in one image".
+One image, one hero scene: Pakistan's first astronaut reaches China's
+space station — Shenzhou-24 lifts off from Jiuquan at 00:18 UTC and docks
+with Tiangong at 03:56 UTC — with five small supporting vignettes for
+breadth across regions and fields. All drawings are original, made with
+code; no photos.
 
-## Main stories
+## Stories in this image
 
-1. Shenzhou-24 lifts off with Pakistan's first astronaut (00:18 UTC)
-2. US proposes new Section 301 tariffs on 14 partners; China faces 20%
-3. Australia passes the Digital Duty of Care (Senate 36–23, House 97–43)
-4. US Q3 GDP revised up to 4.3%; core PCE 3.3% year on year
-5. Xi's graft probe fells Shanghai party chief Chen Jining
-6. Huawei guilty on 10 of 12 counts in a US trial
-7. Microsoft declares "Code Red" after its historic outage
-8. Nvidia slides 5.9%; Dow closes above 50,000
-9. Serang candy-factory fire: 26 dead, 28 still missing
-10. Israeli strike kills Hamas internal-security chief in Gaza
-11. All Cartagena supermarket hostages freed
-12. Houthis claim strikes on a Saudi refinery and Riyadh (claim)
-13. Abrego Garcia lands in Spain after leaving the US
-14. Democrats reach 259 House seats, their largest majority since 1990
-15. Euclid finds the most distant quasar yet (630m years after the Big Bang)
+Hero — Space, China/Pakistan (CONFIRMED):
+Pakistan's first astronaut reaches China's space station. Shenzhou-24
+lifts off 00:18 UTC, docks 03:56 UTC. Muhammad Zeeshan Ali, 40, first
+foreigner aboard Tiangong; stays 5 to 10 days.
 
-Also covered: NATO's space pledge, the Villavicencio car bomb, the
-missing Congo plane, the UK's Rohingya genocide recognition, the
-Ahmadi flogging, US consumer confidence at 103.3, the Nepal quake,
-Syria's landmine casualties, the Shein $100m settlement, Russia's
-2027 defence budget, the Davis Cup, California king tides, the
-Giuliani Medal of Freedom, the Iowa lead-azide detonation, Puigdemont's
-return, the Sarkozy trial order, and Anthropic below its IPO price.
+Also on Wednesday 25 November 2026:
 
-Every story is dated: events from 23–24 November are marked with
-their date, and the DATE CHECK strip explains what was left out
-(Trump–Xi–Putin trilateral ~19–20 Nov, "El Chapo Isidro" arrested
-20 Nov, ICJ Myanmar ruling 19 Nov, COP31 ended 22 Nov).
+- TARIFFS (REPORTED): US proposes tariffs on 14 economies — China 20%,
+  EU 15%, India 25%, Vietnam 35%.
+- KOSPI (CONFIRMED): Kospi −6.2% to 4,697.51; SK Hynix −11.1% — AI
+  doubts sink Asian chip stocks.
+- CAIRO (CONFIRMED): Tanker fire near Cairo kills at least 31.
+- GAZA (CONFIRMED): Israeli strike kills Hamas security chief in Gaza.
+- JAVA MINE (REPORTED): 9 dead, 17 trapped in flooded Java gold mine.
+
+The image also carries a "THE DAY IN UTC" timeline and a "DATE CHECK"
+strip naming three 24 November stories deliberately left out (Huawei
+guilty verdict, Dow above 50,000, Houthi strike on Riyadh).
+
+Sources: Reuters, AP, Xinhua, Yonhap, Al Jazeera. Every story happened
+or was first reported Wednesday 25 November 2026 (times UTC).
 
 ## How it works
 
-`main.py` (Python 3 standard library only, no network) copies the
-pre-rendered `entry.png` (1024×1024, under 1 MiB) into
-`MAKEFUN_OUTPUT_DIR` (or `/output` if it exists, else the current
-directory), verifies it is a 1024×1024 PNG under the 1 MiB limit,
-prints its sha256, and exits 0.
+`main.py` (Python 3, standard library only) copies `entry.png` from its
+own directory to the output directory (`MAKEFUN_OUTPUT_DIR`, or
+`/output` when it exists, otherwise the working directory), then checks
+the copy: a whole PNG, 1024x1024, under 1 MiB, and prints its sha256.
+It exits 0 when the checks pass.
 
-```sh
-MAKEFUN_OUTPUT_DIR=out python3 main.py
-```
+`render.py` is the build-time script that drew `entry.png` from scratch
+with Pillow; it is not run by the entry.
